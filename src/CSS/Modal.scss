@@ -1,0 +1,87 @@
+.Modal {
+	background-color: #fff;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20rem;
+	height: 15rem;
+	border-radius: 30px;
+	top: -15rem;
+}
+
+.Modal p {
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+.Modal_cross {
+	position: absolute;
+	background-color: #800080;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	top: 0.5rem;
+	right: 0.5rem;
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.Modal_icon {
+	background-color: #93f093;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	color: green;
+	font-size: 3rem;
+	margin: 1rem 0;
+}
+
+.Modal > p:nth-child(3) {
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.Modal > p:nth-child(4) {
+	font-size: 1rem;
+}
+
+.Modal_buttons {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	height: auto;
+	margin: 1rem 0;
+}
+
+.btn {
+	margin: 0 0.3rem;
+	border: 1px solid #800080;
+	background-color: #fff;
+	border-radius: 5px;
+	height: 2rem;
+	color: #800080;
+	&:hover {
+		background-color: #800080;
+		color: #fff;
+	}
+}
+
+.btnActive {
+	background-color: #800080;
+	color: #fff;
+}
+
+.btnDisplayble {
+	display: none;
+}
+
+.onScreen {
+	top: 33vh;
+}
