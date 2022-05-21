@@ -1,3 +1,16 @@
+.BackgroundModal {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #3f3e3e85;
+	top: -100vh;
+	z-index: 1;
+	transition: top 1s, opacity 1s;
+}
+
 .Modal {
 	background-color: #fff;
 	position: absolute;
@@ -7,7 +20,7 @@
 	width: 20rem;
 	height: 15rem;
 	border-radius: 30px;
-	top: -15rem;
+	z-index: 4;
 }
 
 .Modal p {
@@ -28,17 +41,16 @@
 	right: 0.5rem;
 	font-size: 1.5rem;
 	color: #fff;
+	cursor: pointer;
 }
 
 .Modal_icon {
-	background-color: #93f093;
 	width: 4rem;
 	height: 4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	color: green;
 	font-size: 3rem;
 	margin: 1rem 0;
 }
@@ -78,10 +90,22 @@
 	color: #fff;
 }
 
-.btnDisplayble {
-	display: none;
+.onScreen {
+	top: 0;
+	// opacity: 1;
 }
 
-.onScreen {
-	top: 33vh;
+.warningIcon {
+	background-color: #fdfd8ab6;
+	color: #ffff00;
+}
+
+.successIcon {
+	background-color: #93f093;
+	color: #008000;
+}
+
+.dangerIcon {
+	background-color: #f77777;
+	color: #ff0000;
 }

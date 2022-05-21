@@ -1,18 +1,30 @@
 import React from "react";
 
+// Styles
 import "../CSS/Modal.scss";
 
-export default function Modal() {
+export default function Modal(props) {
 	return (
-		<div className="Modal onScreen">
-			<div className="Modal_cross">x</div>
-			<div className="Modal_icon">!</div>
-			<p>Title</p>
-			<p>Mesage</p>
-			<div className="Modal_buttons">
-				<button className="btn btnActive btnDisplayble">Cerrar Pestaña</button>
-				<button className="btn btnActive">Borrar</button>
-				<button className="btn">Cancelar</button>
+		<div
+			className={`BackgroundModal ${props.onScreen !== 0 ? "onScreen" : ""}`}
+		>
+			<div className={`Modal`}>
+				<div className="Modal_cross" onClick={props.hideModal}>
+					x
+				</div>
+				<div className={`Modal_icon ${props.mod.class}`}>{props.mod.icon}</div>
+				<p>{props.mod.title}</p>
+				<p>{props.mod.message}</p>
+				<div className="Modal_buttons">
+					{props.mod.btns.map((btn) => (
+						<button
+							className={`btn ${!btn.type ? "btnActive" : ""}`}
+							onClick={() => props.selectFunction(btn.function)}
+						>
+							{btn.message}
+						</button>
+					))}
+				</div>
 			</div>
 		</div>
 	);
