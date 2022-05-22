@@ -18,6 +18,7 @@ export default function Modal(props) {
 				<div className="Modal_buttons">
 					{props.mod.btns.map((btn) => (
 						<button
+							key={btn.message}
 							className={`btn ${!btn.type ? "btnActive" : ""}`}
 							onClick={() => props.selectFunction(btn.function)}
 						>

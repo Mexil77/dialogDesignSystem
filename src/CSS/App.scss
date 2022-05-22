@@ -12,7 +12,7 @@
 	flex-direction: column;
 	justify-content: space-around;
 	width: 50%;
-	height: 50%;
+	// height: auto;
 	box-sizing: border-box;
 	padding: 20px;
 	background-color: burlywood;
@@ -23,6 +23,7 @@
 	height: 2rem;
 	border-radius: 30px;
 	border: 1px solid #5d5d5d;
+	margin-bottom: 1.5rem;
 }
 
 .AppBtn_alert {

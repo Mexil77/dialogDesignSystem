@@ -25,7 +25,7 @@ function App() {
 				hideModal();
 				break;
 			case 2:
-				changeModal(4);
+				selectAndDisplayModal(3);
 				break;
 			default:
 				break;
@@ -36,33 +36,24 @@ function App() {
 		setModalDisplaied(0);
 	}
 
-	function changeModal(newModal) {
-		console.log(`newModal: ${newModal}`);
-		setModalSelected(newModal);
-	}
-
 	return (
 		<div className="App">
 			<div className="App_selectButtons">
 				<h1>Select dialog</h1>
-				<button
-					onClick={() => selectAndDisplayModal(0)}
-					className="AppBtn AppBtn_alert"
-				>
-					Alert
-				</button>
-				<button
-					onClick={() => selectAndDisplayModal(1)}
-					className="AppBtn AppBtn_success"
-				>
-					Success
-				</button>
-				<button
-					onClick={() => selectAndDisplayModal(2)}
-					className="AppBtn AppBtn_danger"
-				>
-					Danger
-				</button>
+				{Modals.map((modal) => {
+					if (Object.keys(modal.btnTriger).length > 0) {
+						return (
+							<button
+								key={modal.btnTriger.title}
+								onClick={() => selectAndDisplayModal(modal.type - 1)}
+								className={`AppBtn ${modal.btnTriger.class}`}
+							>
+								{modal.btnTriger.title}
+							</button>
+						);
+					}
+					return "";
+				})}
 			</div>
 			<Modal
 				mod={Modals[modalSelected]}
