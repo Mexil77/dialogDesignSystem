@@ -43,7 +43,7 @@ En esta carpeta encontraremos los ficheros con los objetos JSON necesarios para 
 
 Lo unico que debes hacer es crear un objeto nuevo en el array con la siguiente estructura:
 
-```JSON
+```
 {
     icon: <"Nombre del icono importado de react icons" />,
     type: "Numero de la posicion en el array mas 1",
