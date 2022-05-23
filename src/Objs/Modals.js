@@ -10,7 +10,7 @@ let Modals = [
 		message: "No podras volver atras.",
 		btnTriger: {
 			title: "Alert Button",
-			class: "AppBtn_alert",
+			class: "selecter_alert",
 		},
 		btns: [
 			{
@@ -33,7 +33,7 @@ let Modals = [
 		message: "Todo ha salido bien",
 		btnTriger: {
 			title: "Success Button",
-			class: "AppBtn_success",
+			class: "selecter_success",
 		},
 		btns: [
 			{
@@ -50,9 +50,8 @@ let Modals = [
 		title: "Upss",
 		message: "Algo ha pasado",
 		btnTriger: {
-			type: 3,
 			title: "Danger Button",
-			class: "AppBtn_danger",
+			class: "selecter_danger",
 		},
 		btns: [],
 	},
@@ -65,6 +64,25 @@ let Modals = [
 		btnTriger: {},
 		btns: [],
 	},
+	// New button to practice add newone
+	// {
+	// 	icon: <AiFillCheckCircle />,
+	// 	type: 5,
+	// 	class: "warningIcon",
+	// 	title: "puta que oferton!",
+	// 	message: "Compra yaaaaa!!!!",
+	// 	btnTriger: {
+	// 		title: "Comprar",
+	// 		class: "selecter_fanci",
+	// 	},
+	// 	btns: [
+	// 		{
+	// 			type: 0,
+	// 			message: "comprar",
+	// 			function: 2,
+	// 		},
+	// 	],
+	// },
 ];
 
 export default Modals;

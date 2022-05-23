@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+## Authors
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [@Mexil77](https://github.com/Mexil77)
 
-## Available Scripts
+## Usage/Examples
 
-In the project directory, you can run:
+git clone git@github.com:Mexil77/dialogDesignSystem.git
 
-### `npm start`
+cd dialogdesignsystem
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install react-icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
 
-### `npm test`
+## Sobre el proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este pequeño proyecto de despliegue de modals se realizo con react, html, sass y js.
+La eleccion de estas tecnologias no gue mas que por mera comodidad a la hora de realizarlo y volverlo escalable para quien decidiera agregar mas y contribuir al proyecto.
 
-### `npm run build`
+## Distribucion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Las carpetas importantes serian 3, las 3 dentro de src y son las siguientes:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Components
+- CSS
+- Obj
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Components
 
-### `npm run eject`
+Aqui encontraremos todos los componentes de react que construyen la aplicacion, en este caso solo serian 2, el Selecter y Modal.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Selecter como componente padre se encarga del estado, es decir guardar la informacion del Modal a desplegar y cuando debe ser desplegado.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Modal por otro lado solo recive la informacion que Selecter le mande para visualizarla.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Aqui se encontraran los estilos css de todos los componentes con ficheros de igual nombre solo que con extencion .css o .scss
 
-## Learn More
+### Obj
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+En esta carpeta encontraremos los ficheros con los objetos JSON necesarios para deslpegar tanto los botenes triger como los modal de cada uno de ellos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lo unico que debes hacer es crear un objeto nuevo en el array con la siguiente estructura:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```JSON
+{
+    icon: <"Nombre del icono importado de react icons" />,
+    type: "Numero de la posicion en el array mas 1",
+    class: "Una de las siguientes: 'warningIcon', 'succesIcon' o 'dangerIcon'",
+    title: "titulo del modal",
+    message: "mensaje del modal",
+    btnTriget: //Si deseas que tu modal no tenga boton que lo lance, deja esta propiedad vacia, es decir '{}'
+    {
+        title: "Titulo del boton que lanzara el modal",
+        class: "Una de las siguientes: 'selecter_alert', 'selecter_success', 'selecter_danger' o 'selecter_fanci'",
+    }
+    btns: //Si deseas que tu modal no tenga botones, solo deja este array vacio, es decir: '[]'
+    [
+        {
+            type: "0 para fondo blanco, 1 para fondo relleno o boton activo",
+            message: "Texto dentro del boton",
+            function: "Numero de la posicion en el switch de la funcion 'selectFunction' que llame a la fucion deseada para realizar con este boton",
+        }
+    ]
+}
+```

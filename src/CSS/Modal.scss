@@ -8,6 +8,11 @@
 	background-color: #3f3e3e85;
 	top: -100vh;
 	z-index: 1;
+	font: {
+		family: "Courier New", Courier, monospace;
+		weight: 900;
+		size: 4vmin;
+	}
 	transition: top 1s, opacity 1s;
 }
 
@@ -92,11 +97,10 @@
 
 .onScreen {
 	top: 0;
-	// opacity: 1;
 }
 
 .warningIcon {
-	background-color: #fdfd8ab6;
+	background-color: #ffff084f;
 	color: #ffff00;
 }
 
